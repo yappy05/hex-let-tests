@@ -1,4 +1,5 @@
+import { strict as assert, strict } from "node:assert";
 import capitalise from "../src/capitalise.js";
-if (capitalise("") !== "") throw new Error("пустая строка");
-if (capitalise("hello" !== "Hello"))
-  throw new Error("код работает не правильно");
+
+strict.equal(capitalise(""), "");
+strict.equal(capitalise("hello"), "Hello");
